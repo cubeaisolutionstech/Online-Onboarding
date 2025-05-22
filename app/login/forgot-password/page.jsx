@@ -15,11 +15,17 @@ export default function ForgotPasswordPage() {
 
     try {
       // Generate OTP
-      const otp = Math.floor(100000 + Math.random() * 900000).toString()
+      const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-// In a real application, you would send a reset link via your API
+
+/* In a real application, you would send a reset link via your API
 // const response = await fetch('/api/auth/forgot-password', {
 //   method: 'POST',
 //   headers: { 'Content-Type': 'application/json' },
-//   body: JSON.stringify({ email, otp })
-// })
+//   body: JSON.stringify({ email, otp }),
+    });
+*/
+} catch (error) {
+  console.error('Error in password handler:',error);
+}
+};
